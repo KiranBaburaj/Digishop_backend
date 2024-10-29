@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles','users', 
+    'django.contrib.staticfiles','users',  'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = ['corsheaders.middleware.CorsMiddleware',
@@ -68,14 +68,17 @@ TEMPLATES = [
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
+    # Other settings...
 }
 
 
 WSGI_APPLICATION = 'Digishop.wsgi.application'
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS =[
+    "http://localhost:5173",
+]
 
 JWT_AUTH = {
     'JWT_RESPONSE_PAYLOAD_HANDLER': 'users.utils.jwt_response_payload_handler',
