@@ -1,6 +1,3 @@
-
-
-```markdown
 # Digishop
 
 Welcome to **Digishop**, a comprehensive backend application designed for an e-commerce platform. This application allows users to register, log in, manage a shopping cart, and perform CRUD operations on products. 
@@ -42,7 +39,7 @@ To set up the project locally, follow these steps:
    ```bash
    git clone <repository-url>
    cd digishop
-   ```
+
 
 2. **Create a virtual environment:**
    ```bash
