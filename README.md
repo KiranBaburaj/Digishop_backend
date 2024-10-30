@@ -1,7 +1,6 @@
 # Digishop
 
-Welcome to **Digishop**, a comprehensive backend application designed for an e-commerce platform. This application allows users to register, log in, manage a shopping cart, and perform CRUD operations on products. 
-
+Welcome to **Digishop**, a comprehensive backend application designed for an e-commerce platform. This application allows users to register, log in, manage a shopping cart
 ## Table of Contents
 
 - [Introduction](#introduction)
