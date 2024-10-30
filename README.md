@@ -10,14 +10,13 @@ Welcome to **Digishop**, a comprehensive backend application designed for an e-c
 - [Usage](#usage)
 
 ## Introduction
-
-Greetings from **Noviindus Technologies**! Thank you for your interest in the Python Developer position. We are excited to present this assessment test interview that focuses on building an e-commerce application.
+digishop digital Ecommerce
 
 ## Technologies Used
 
 This project is built using the following technologies:
 
-- **Python 3.x**
+
 - **Django 5.1.2**
 - **Django REST Framework 3.15.2**
 - **djangorestframework-simplejwt 5.3.1** for JWT authentication
