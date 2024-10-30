@@ -9,7 +9,6 @@ Welcome to **Digishop**, a comprehensive backend application designed for an e-c
 - [Setup](#setup)
 - [Features](#features)
 - [Usage](#usage)
-- [License](#license)
 
 ## Introduction
 
@@ -87,18 +86,3 @@ After setting up the project, you can access the API endpoints for the following
 - **Delete from Cart**: `DELETE /api/cart/remove/`
 - **Product Management**: CRUD operations on products.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-We hope this project demonstrates your skills effectively. Feel free to reach out if you have any questions or need further clarifications.
-```
-
-### Notes:
-- Replace `<repository-url>` with the actual URL of your Git repository.
-- You may need to customize sections further based on the exact structure and endpoints of your backend.
-- Ensure that the `LICENSE` file mentioned exists if you include that section.
-
-This `README.md` provides a clear overview of the project, its setup, and its features, making it easier for anyone reviewing it to understand your work. If you need any modifications or additions, just let me know!
