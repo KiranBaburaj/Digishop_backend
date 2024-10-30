@@ -74,15 +74,21 @@ To set up the project locally, follow these steps:
 - **Product Management**:
   - Admins can add, edit, and delete products in the database.
 
-## Usage
-
+Usage
 After setting up the project, you can access the API endpoints for the following features:
 
-- **Registration**: `POST /api/register/`
-- **Login**: `POST /api/login/`
-- **Add to Cart**: `POST /api/cart/add/`
-- **View Cart**: `GET /api/cart/`
-- **Update Cart**: `PUT /api/cart/update/`
-- **Delete from Cart**: `DELETE /api/cart/remove/`
-- **Product Management**: CRUD operations on products.
+User Management
+Registration: POST /api/users/
+Login: POST /api/token/
+Refresh Token: POST /api/token/refresh/
+Shopping Cart
+Add to Cart: POST /api/carts/<cart_id>/cart-items/ (create a cart item for a specific cart)
+View Cart: GET /api/carts/<cart_id>/ (view items in a specific cart)
+Update Cart Item: PUT /api/cart-items/<item_id>/ (update a specific cart item)
+Delete from Cart: DELETE /api/cart-items/<item_id>/ (remove a specific item from the cart)
+Product Management
+List Products: GET /api/products/
+Add Product: POST /api/products/
+Update Product: PUT /api/products/<product_id>/
+Delete Product: DELETE /api/products/<product_id>/
 
