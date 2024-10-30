@@ -140,3 +140,18 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+from datetime import timedelta
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=600),  # Set access token lifetime to 60 minutes
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),      # Set refresh token lifetime to 7 days
+    'ROTATE_REFRESH_TOKENS': True,                     # Rotate refresh tokens on each request
+    'BLACKLIST_AFTER_ROTATION': True,                   # Blacklist old refresh tokens after rotation
+    'ALGORITHM': 'HS256',                              # Algorithm used to sign the tokens
+    'SIGNING_KEY': SECRET_KEY,                         # Use your secret key
+    'AUTH_HEADER_TYPES': ('Bearer',),
+    'USER_ID_FIELD': 'id',
+    'USER_ID_CLAIM': 'user_id',
+    'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
+    'TOKEN_TYPE_CLAIM': 'token_type',
+}
