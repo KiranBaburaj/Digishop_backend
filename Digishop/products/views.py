@@ -24,6 +24,12 @@ class CartViewSet(viewsets.ModelViewSet):
         # Only retrieve the cart for the authenticated user
         return self.queryset.filter(user=self.request.user)
 
+from rest_framework import viewsets, status
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from .models import Product, Cart, CartItem
+from .serializers import CartItemSerializer
+
 class CartItemViewSet(viewsets.ModelViewSet):
     queryset = CartItem.objects.all()
     serializer_class = CartItemSerializer
@@ -32,3 +38,8 @@ class CartItemViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         # Filter cart items for the authenticated user's cart
         return self.queryset.filter(cart__user=self.request.user)
+
+    def perform_create(self, serializer):
+        # Automatically set the cart based on the authenticated user
+        cart, created = Cart.objects.get_or_create(user=self.request.user)
+        serializer.save(cart=cart)
